@@ -19,6 +19,7 @@ public class DialogueBox : MonoBehaviour
     public string DialogueText = "";
 
     public GameObject NextDialogue = null;
+    public bool SpawnOnPlayer = false;
 
     public VariationAudioPlayer SoundPlayer = null;
 
@@ -87,11 +88,15 @@ public class DialogueBox : MonoBehaviour
                 //GameObject.Find("Menira") - make him move
             }
         }
-        else
+        else if(!SpawnOnPlayer)
         {
             GameObject next = Instantiate(NextDialogue, transform.position, Quaternion.identity, transform.parent);
             next.GetComponent<DialogueBox>().FinalDialogue = FinalDialogue;
             next.GetComponent<DialogueBox>().MeniraTrigger = MeniraTrigger;
+        }
+        else
+        {
+            Instantiate(NextDialogue, GameObject.Find("Player").transform.position, Quaternion.identity);
         }
 
         if(NextDialogue == null || ForceUnlockPlayer)
