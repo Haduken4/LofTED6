@@ -641,6 +641,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextDialogue: {fileID: 3472566554381957501, guid: 9c4a33ed2783e774d976a85eb6d63d0e, type: 3}
   DialogueOwner: {fileID: 2271440251512174530}
+  ForceUnlockPlayer: 0
+  SpawnOnPlayer: 0
 --- !u!1 &2271440251475955133
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +879,7 @@ MonoBehaviour:
   TMText: {fileID: 2271440251475955131}
   DialogueText: Oh it's your first time? Welcome! Vitamin R?
   NextDialogue: {fileID: 0}
+  SpawnOnPlayer: 0
   SoundPlayer: {fileID: 1125347276689716193}
 --- !u!1 &2426954149445373653
 GameObject:
@@ -912,7 +915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184.9, y: 28.699997}
+  m_AnchoredPosition: {x: -184.9, y: 27.946}
   m_SizeDelta: {x: 154.4916, y: 154.4916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1389737039734136419
@@ -1310,6 +1313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextDialogue: {fileID: 7485682636984173275, guid: e4cb3173c261bdb4db2e50c237a519e9, type: 3}
   DialogueOwner: {fileID: 2271440251512174530}
+  ForceUnlockPlayer: 0
+  SpawnOnPlayer: 0
 --- !u!1 &7006970859894945526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,6 +1463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextDialogue: {fileID: 7023678560671718915, guid: 9c8b5a313ea8b5649969e70ae7ad4b7f, type: 3}
   DialogueOwner: {fileID: 2271440251512174530}
+  ForceUnlockPlayer: 0
+  SpawnOnPlayer: 0
 --- !u!1 &8009001822573075587
 GameObject:
   m_ObjectHideFlags: 0
