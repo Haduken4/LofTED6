@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueBox : MonoBehaviour
@@ -10,6 +11,8 @@ public class DialogueBox : MonoBehaviour
     [System.NonSerialized]
     public bool FinalDialogue = false;
     public bool MeniraTrigger = false;
+    public bool HasOptions = false;
+    public bool ForceUnlockPlayer = false;
 
     public TextMeshProUGUI TMText = null;
     [TextArea]
@@ -23,6 +26,11 @@ public class DialogueBox : MonoBehaviour
     bool finished = false;
     float timer = 0.0f;
 
+    void Awake()
+    {
+        SetButtonsActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -31,6 +39,7 @@ public class DialogueBox : MonoBehaviour
             if(Input.GetMouseButtonUp(0))
             {
                 finished = true;
+                SetButtonsActive(true);
                 TMText.text = DialogueText;
                 return;
             }
@@ -42,6 +51,7 @@ public class DialogueBox : MonoBehaviour
                 if (textIndex >= DialogueText.Length)
                 {
                     finished = true;
+                    SetButtonsActive(true);
                 }
                 else
                 {
@@ -56,31 +66,54 @@ public class DialogueBox : MonoBehaviour
         }
         else
         {
-            if(Input.GetMouseButtonUp(0))
+            if(Input.GetMouseButtonUp(0) && !HasOptions)
             {
-                if(NextDialogue == null)
-                {
-                    if (FinalDialogue)
-                    {
-                        GameObject.Find("DialogueManager").GetComponent<DialogueManager>().FinalMeniraTrigger.TriggerDialogue();
-                    }
-                    if (MeniraTrigger)
-                    {
-                        //GameObject.Find("Menira") - make him move
-                    }
-
-                    GameObject.Find("Player").GetComponent<PlayerController>().Locked = false;
-                }
-                else
-                {
-                    GameObject next = Instantiate(NextDialogue, transform.position, Quaternion.identity, transform.parent);
-                    next.GetComponent<DialogueBox>().FinalDialogue = FinalDialogue;
-                    next.GetComponent<DialogueBox>().MeniraTrigger = MeniraTrigger;
-                }
-
-                Destroy(gameObject);
+                FinishDialogue();
             }
         }
         
+    }
+
+    public void FinishDialogue()
+    {
+        if (NextDialogue == null)
+        {
+            if (FinalDialogue)
+            {
+                GameObject.Find("DialogueManager").GetComponent<DialogueManager>().FinalMeniraTrigger.TriggerDialogue();
+            }
+            if (MeniraTrigger)
+            {
+                //GameObject.Find("Menira") - make him move
+            }
+        }
+        else
+        {
+            GameObject next = Instantiate(NextDialogue, transform.position, Quaternion.identity, transform.parent);
+            next.GetComponent<DialogueBox>().FinalDialogue = FinalDialogue;
+            next.GetComponent<DialogueBox>().MeniraTrigger = MeniraTrigger;
+        }
+
+        if(NextDialogue == null || ForceUnlockPlayer)
+        {
+            GameObject.Find("Player").GetComponent<PlayerController>().Locked = false;
+        }
+
+        Destroy(gameObject);
+    }
+
+    void SetButtonsActive(bool active)
+    {
+        if (HasOptions)
+        {
+            for(int i = 0; i < transform.childCount; ++i)
+            {
+                DialogueButtonBehavior dbb = transform.GetChild(i).GetComponent<DialogueButtonBehavior>();
+                if(dbb)
+                {
+                    dbb.gameObject.SetActive(active);
+                }
+            }
+        }
     }
 }
