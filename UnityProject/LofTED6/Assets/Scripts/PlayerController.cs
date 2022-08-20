@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    [System.NonSerialized]
+    public bool Locked = false;
+
     public float Movespeed = 10;
     
     Rigidbody2D rb2d;
@@ -18,6 +21,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Locked)
+        {
+            rb2d.velocity = Vector2.zero;
+            return;
+        }
+
         Vector2 dir = Vector2.zero;
 
         if(Input.GetKey(KeyCode.A))
