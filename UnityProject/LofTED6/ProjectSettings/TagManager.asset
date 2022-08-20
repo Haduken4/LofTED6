@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3749699613
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Props
+    uniqueID: 1077115747
+    locked: 0
+  - name: People
+    uniqueID: 806658665
+    locked: 0
+  - name: Edges
+    uniqueID: 1162148091
+    locked: 0
+  - name: Doors/Windows
+    uniqueID: 1969428365
+    locked: 0
+  - name: Overlapping People
+    uniqueID: 1478566127
     locked: 0
