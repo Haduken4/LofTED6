@@ -10,4 +10,15 @@ public class DialogueManager : MonoBehaviour
     public int DialoguesTriggered = 0;
 
     public DialogueTrigger FinalMeniraTrigger = null;
+
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.LeftControl))
+        {
+            if(Input.GetKeyDown(KeyCode.L))
+            {
+                DialoguesTriggered = TotalDialogueTriggers - 1;
+            }
+        }
+    }
 }

@@ -85,7 +85,7 @@ public class DialogueBox : MonoBehaviour
             }
             if (MeniraTrigger)
             {
-                //GameObject.Find("Menira") - make him move
+                GameObject.Find("menira").GetComponent<MeniraWalkBehavior>().StartWalking();
             }
         }
         else if(!SpawnOnPlayer)

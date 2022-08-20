@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class CanvasBehavior : MonoBehaviour
 {
+    public static Texture2D FinalTexture = null;
+    public static int FinalWidth = 64;
+    public static int FinalHeight = 64;
+
     //Width and height of the canvas in pixels, should be positive
     [SerializeField]
     int Width = 64;
@@ -199,5 +203,9 @@ public class CanvasBehavior : MonoBehaviour
 #endif
         Directory.CreateDirectory(savePath);
         File.WriteAllBytes(savePath + "Whiteboard.png", bytes);
+
+        FinalTexture = canvasTexture;
+        FinalHeight = Height;
+        FinalWidth = Width;
     }
 }

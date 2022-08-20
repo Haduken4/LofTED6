@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Room.unity
+    guid: bfe61b6d1a2cf7f4881f7a0947bda184
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: a7fb15f159ae97c40804e7b1b2181fa5
+  - enabled: 1
+    path: Assets/Scenes/Loft.unity
+    guid: 48b2776851a793640b60d088ddfdd610
+  - enabled: 1
+    path: Assets/Scenes/CanvasTestScene.unity
+    guid: e48424bc78635cd4eac9219c9c8f4b42
+  - enabled: 1
+    path: Assets/Scenes/FinalMenu.unity
+    guid: 5e4e9be2c3eecca49a1a2ddc36b44d3b
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

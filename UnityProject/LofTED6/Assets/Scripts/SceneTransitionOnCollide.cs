@@ -32,7 +32,12 @@ public class SceneTransitionOnCollide : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(fadeObj == null && collision.CompareTag("Player"))
+        StartSceneTransition();
+    }
+
+    public void StartSceneTransition()
+    {
+        if (fadeObj == null)
         {
             timer = 0.0f;
             fadeObj = Instantiate(FadeArchetype);
