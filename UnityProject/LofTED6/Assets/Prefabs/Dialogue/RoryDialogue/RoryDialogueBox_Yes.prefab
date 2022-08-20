@@ -592,7 +592,7 @@ MonoBehaviour:
   ForceUnlockPlayer: 1
   TMText: {fileID: 7485682636947978404}
   DialogueText: Here you go!
-  NextDialogue: {fileID: 0}
+  NextDialogue: {fileID: 4614544029794455594, guid: e4cda54bd373d1346a4a87c0602995b6, type: 3}
   SoundPlayer: {fileID: 8645137839088158462}
 --- !u!1 &9155251078090690745
 GameObject:
@@ -742,3 +742,4 @@ MonoBehaviour:
   SoundPlayer: {fileID: 1594684614463505744}
   PitchVariation: 0.05
   VolumeVariation: 0.02
+  AutoPlay: 0

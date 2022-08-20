@@ -7,6 +7,7 @@ public class VariationAudioPlayer : MonoBehaviour
     public AudioSource SoundPlayer = null;
     public float PitchVariation = 0.05f;
     public float VolumeVariation = 0.02f;
+    public bool AutoPlay = false;
 
     float ogPitch = 0;
     float ogVol = 0;
@@ -18,6 +19,14 @@ public class VariationAudioPlayer : MonoBehaviour
         {
             ogPitch = SoundPlayer.pitch;
             ogVol = SoundPlayer.volume;
+        }
+    }
+
+    void Update()
+    {
+        if(AutoPlay)
+        {
+            PlaySound();
         }
     }
 

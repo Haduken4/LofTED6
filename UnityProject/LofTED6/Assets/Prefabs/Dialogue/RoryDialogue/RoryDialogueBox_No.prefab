@@ -299,6 +299,7 @@ MonoBehaviour:
   SoundPlayer: {fileID: 4751862095634906870}
   PitchVariation: 0.05
   VolumeVariation: 0.02
+  AutoPlay: 0
 --- !u!1 &3472566554381957501
 GameObject:
   m_ObjectHideFlags: 0
