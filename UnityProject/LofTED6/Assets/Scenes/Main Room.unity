@@ -1644,6 +1644,7 @@ Transform:
   - {fileID: 1705228268}
   - {fileID: 1690261685}
   - {fileID: 1959561285}
+  - {fileID: 1789941514}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1934,6 +1935,7 @@ GameObject:
   - component: {fileID: 894914150}
   - component: {fileID: 894914149}
   - component: {fileID: 894914151}
+  - component: {fileID: 894914152}
   m_Layer: 0
   m_Name: grant
   m_TagString: Untagged
@@ -2033,6 +2035,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.8528323, y: 20.7}
   m_EdgeRadius: 0
+--- !u!114 &894914152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894914148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65342221abbbd9e43afede2407182cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueToTrigger: {fileID: 1789941515}
 --- !u!1 &915221268
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,6 +4022,7 @@ GameObject:
   - component: {fileID: 1665441446}
   - component: {fileID: 1665441445}
   - component: {fileID: 1665441447}
+  - component: {fileID: 1665441448}
   m_Layer: 0
   m_Name: Paul
   m_TagString: Untagged
@@ -4106,6 +4122,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.59, y: 17.92}
   m_EdgeRadius: 0
+--- !u!114 &1665441448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665441444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65342221abbbd9e43afede2407182cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueToTrigger: {fileID: 1789941515}
 --- !u!1 &1680644492
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,6 +4491,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1789941513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1789941514}
+  - component: {fileID: 1789941515}
+  m_Layer: 0
+  m_Name: GrantPaulDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1789941514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789941513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 832545123}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789941515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789941513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8905d63bd0a584287bd568c07aca84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstDialogueBox: {fileID: 3965597852293425194, guid: 4feae91ba2ee49b4da2d5df03d963692, type: 3}
+  Untriggerable: 0
 --- !u!1 &1810405666
 GameObject:
   m_ObjectHideFlags: 0
