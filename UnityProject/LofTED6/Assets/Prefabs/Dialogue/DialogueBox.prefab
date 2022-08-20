@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MeniraTrigger: 0
   HasOptions: 0
+  ForceUnlockPlayer: 0
   TMText: {fileID: 756226103420437650}
   DialogueText: What the fuck did you just say to me you little bitch
   NextDialogue: {fileID: 448261330756501003, guid: bb784de31c70a7441804292cfa756c18, type: 3}
@@ -381,6 +382,7 @@ MonoBehaviour:
   SoundPlayer: {fileID: 8916474314710579558}
   PitchVariation: 0.05
   VolumeVariation: 0.02
+  AutoPlay: 0
 --- !u!1 &3124497789884172666
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +677,7 @@ MonoBehaviour:
   m_text: Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
