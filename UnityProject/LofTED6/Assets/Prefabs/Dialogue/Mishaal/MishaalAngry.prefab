@@ -140,4 +140,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8854fe88969a9549ae44faf9b7071d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxAudibleDistance: 8
+  MaxAudibleDistance: 6

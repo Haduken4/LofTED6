@@ -357,6 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextDialogue: {fileID: 7485682636984173275, guid: e4cb3173c261bdb4db2e50c237a519e9, type: 3}
   DialogueOwner: {fileID: 7023678560671718917}
+  ForceUnlockPlayer: 0
 --- !u!1 &3258438875639820093
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextDialogue: {fileID: 3472566554381957501, guid: 9c4a33ed2783e774d976a85eb6d63d0e, type: 3}
   DialogueOwner: {fileID: 7023678560671718917}
+  ForceUnlockPlayer: 0
 --- !u!1 &7023678560671718915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1027,7 @@ MonoBehaviour:
   TMText: {fileID: 7023678560699868284}
   DialogueText: Haha it's Rainier. Just beer. Want some?
   NextDialogue: {fileID: 0}
+  SpawnOnPlayer: 0
   SoundPlayer: {fileID: 8170323352850684454}
 --- !u!1 &7023678560699868282
 GameObject:

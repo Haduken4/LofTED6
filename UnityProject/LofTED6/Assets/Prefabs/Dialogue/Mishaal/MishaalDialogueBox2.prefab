@@ -282,6 +282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextDialogue: {fileID: 4313755225158500078, guid: b36399fc91b2b8240a896941640aec45, type: 3}
   DialogueOwner: {fileID: 4097823296900969455}
+  ForceUnlockPlayer: 1
+  SpawnOnPlayer: 1
 --- !u!1 &2319886487417643403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1027,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextDialogue: {fileID: 2238306125707028864, guid: 766780325c4850c4499be28c40e231e8, type: 3}
   DialogueOwner: {fileID: 4097823296900969455}
+  ForceUnlockPlayer: 0
+  SpawnOnPlayer: 0
 --- !u!1 &7224826344428192997
 GameObject:
   m_ObjectHideFlags: 0
