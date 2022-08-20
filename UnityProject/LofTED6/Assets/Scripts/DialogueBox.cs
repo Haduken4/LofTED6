@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueBox : MonoBehaviour
@@ -11,6 +12,7 @@ public class DialogueBox : MonoBehaviour
     public bool FinalDialogue = false;
     public bool MeniraTrigger = false;
     public bool HasOptions = false;
+    public bool ForceUnlockPlayer = false;
 
     public TextMeshProUGUI TMText = null;
     [TextArea]
@@ -84,14 +86,17 @@ public class DialogueBox : MonoBehaviour
             {
                 //GameObject.Find("Menira") - make him move
             }
-
-            GameObject.Find("Player").GetComponent<PlayerController>().Locked = false;
         }
         else
         {
             GameObject next = Instantiate(NextDialogue, transform.position, Quaternion.identity, transform.parent);
             next.GetComponent<DialogueBox>().FinalDialogue = FinalDialogue;
             next.GetComponent<DialogueBox>().MeniraTrigger = MeniraTrigger;
+        }
+
+        if(NextDialogue == null || ForceUnlockPlayer)
+        {
+            GameObject.Find("Player").GetComponent<PlayerController>().Locked = false;
         }
 
         Destroy(gameObject);
@@ -101,10 +106,13 @@ public class DialogueBox : MonoBehaviour
     {
         if (HasOptions)
         {
-            DialogueButtonBehavior[] buttons = GetComponentsInChildren<DialogueButtonBehavior>();
-            foreach (DialogueButtonBehavior button in buttons)
+            for(int i = 0; i < transform.childCount; ++i)
             {
-                button.gameObject.SetActive(active);
+                DialogueButtonBehavior dbb = transform.GetChild(i).GetComponent<DialogueButtonBehavior>();
+                if(dbb)
+                {
+                    dbb.gameObject.SetActive(active);
+                }
             }
         }
     }
