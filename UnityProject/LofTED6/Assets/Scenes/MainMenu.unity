@@ -200,8 +200,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20603963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0146, y: -0.0094, z: 0}
-  m_LocalScale: {x: 0.6941466, y: 0.928811, z: 1}
+  m_LocalPosition: {x: 0.0044, y: -0.0094, z: 0}
+  m_LocalScale: {x: 0.9236918, y: 0.928811, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'LofTED
+  m_text: 'LofTED 6
 
     Rebecca & Bar'
   m_isRightToLeft: 0
@@ -757,8 +757,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295240271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0114, y: 0.27, z: 0}
-  m_LocalScale: {x: 0.796724, y: 1.2667174, z: 1}
+  m_LocalPosition: {x: 0.0678, y: 0.407, z: 0}
+  m_LocalScale: {x: 0.8581062, y: 1.5383956, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
