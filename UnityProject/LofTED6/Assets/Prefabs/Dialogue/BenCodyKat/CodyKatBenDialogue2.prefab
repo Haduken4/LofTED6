@@ -248,8 +248,7 @@ MonoBehaviour:
   HasOptions: 0
   ForceUnlockPlayer: 0
   TMText: {fileID: 2748740737787650050}
-  DialogueText: If a woman can't squish my head between her thighs she's not for
-    me.
+  DialogueText: If a woman can't crush my head between her thighs she's not for me.
   NextDialogue: {fileID: 6536623163905289465, guid: 80570762f1818ea43befc9463f037c2b, type: 3}
   SpawnOnPlayer: 0
   SoundPlayer: {fileID: 3908757919198273112}
