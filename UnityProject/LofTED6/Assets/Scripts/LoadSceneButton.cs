@@ -7,7 +7,7 @@ public class LoadSceneButton : MonoBehaviour
 {
     public string SceneToLoad = "";
 
-    void ButtonPressed()
+    public void ButtonPressed()
     {
         SceneManager.LoadScene(SceneToLoad);
     }
