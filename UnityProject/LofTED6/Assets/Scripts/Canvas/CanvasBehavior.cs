@@ -16,6 +16,7 @@ public class CanvasBehavior : MonoBehaviour
     int Height = 64;
 
     public CanvasCursor cursor = null;
+    public Texture2D DefaultTexture = null;
 
     SpriteRenderer spRenderer = null;
     Texture2D canvasTexture = null;
@@ -26,8 +27,9 @@ public class CanvasBehavior : MonoBehaviour
     void Start()
     {
         spRenderer = gameObject.GetComponent<SpriteRenderer>();
-        canvasTexture = InitializeTexture();
+        canvasTexture = InitializeTexture(DefaultTexture);
         canvasSprite = Sprite.Create(canvasTexture, new Rect(0.0f, 0.0f, Width, Height), new Vector2(0.5f, 0.5f), (Width + Height) / 2);
+        
         spRenderer.sprite = canvasSprite;
     }
 
@@ -42,7 +44,7 @@ public class CanvasBehavior : MonoBehaviour
         }
     }
 
-    Texture2D InitializeTexture()
+    Texture2D InitializeTexture(Texture2D def = null)
     {
         Texture2D tex = new Texture2D(Width, Height);
         tex.name = "CanvasTexture";
@@ -51,7 +53,14 @@ public class CanvasBehavior : MonoBehaviour
         {
             for (int y = 0; y < Height; ++y)
             {
-                tex.SetPixel(x, y, new Color(1, 1, 1, 1));
+                if(def)
+                {
+                    tex.SetPixel(x, y, def.GetPixel(x, y));
+                }
+                else
+                {
+                    tex.SetPixel(x, y, new Color(1, 1, 1, 1));
+                }
             }
         }
 
