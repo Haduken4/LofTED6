@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d05547b1751794ba7816a2bab25d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextDialogue: {fileID: 328974451787613696, guid: b66103c5db43ad842aa154f10ce385ec, type: 3}
+  NextDialogue: {fileID: 8519761199540491404, guid: e5539c9fb362d4442a13331df04d8ec3, type: 3}
   DialogueOwner: {fileID: 4231874920938106364}
   ForceUnlockPlayer: 1
   SpawnOnPlayer: 1

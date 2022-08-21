@@ -36,7 +36,17 @@ public class MeniraWalkBehavior : MonoBehaviour
                     return;
                 }
             }
-            transform.position += (Points[index] - transform.position).normalized * WalkSpeed * Time.deltaTime;
+            Vector3 dir = (Points[index] - transform.position).normalized;
+
+            transform.position += dir * WalkSpeed * Time.deltaTime;
+            if(dir.x > 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if(dir.x < 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
         }
     }
 

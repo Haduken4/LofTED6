@@ -32,10 +32,12 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKey(KeyCode.A))
         {
             dir += Vector2.left;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
         if (Input.GetKey(KeyCode.D))
         {
             dir += Vector2.right;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         if (Input.GetKey(KeyCode.W))
         {
